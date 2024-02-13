@@ -1,0 +1,70 @@
+.offer
+   &__container
+      padding: 30px
+      margin: 0 -30px
+      min-height: 820px
+      background-image: url("../img/phones.jpg")
+      background-repeat: no-repeat
+      background-position: bottom
+      background-size: 1290px
+
+      display: flex
+      flex-direction: column
+      align-items: center
+
+   &__main-title
+      font-size: 20px
+      font-weight: 500
+      line-height: 24px
+      margin-bottom: 24px
+
+   &__title
+      font-size: 34px
+      font-weight: 500
+      line-height: 41px
+      margin-bottom: 24px
+      text-align: center
+
+   &__price
+      font-size: 20px
+      font-weight: 300
+      line-height: 24px
+      margin-bottom: 32px
+
+@media (min-resolution: 2dppx)
+   .offer
+      &__container
+         background-image: url("../img/phones-2x.jpg")
+
+@media (max-width: 800px)
+   .offer
+      &__container
+         background-image: url("../img/phones-tablet.jpg")
+         min-height: 720px
+         background-size: 800px
+
+      &__main-title
+         font-size: 18px
+
+      &__title
+         font-size: 26px
+
+      &__price
+         font-size: 18px
+
+@media (max-width: 800px)
+   @media (min-resolution: 2dppx)
+      .offer
+         &__container
+            background-image: url("../img/phones-tablet-2x.jpg")
+
+@media (max-width: 440px)
+   .offer
+      &__container
+         background-image: url("../img/phones-mobile.jpg")
+         background-size: 400px
+
+   @media (min-resolution: 2dppx)
+      .offer
+         &__container
+            background-image: url("../img/phones-mobile-2x.jpg")

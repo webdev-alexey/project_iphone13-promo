@@ -31,20 +31,25 @@
         background-color: $grey
         margin: 0 25px
 
+    &__link
+        opacity: 1
+    &:hover
+        opacity: 0.5
+
 @media (max-width: 800px)
-header
-    &__container
-        align-items: flex-start
+    .header
+        &__container
+            align-items: flex-start
 
-.navigation
-    font-size: 16px
-    line-height: 24px
+    .navigation
+        font-size: 16px
+        line-height: 24px
 
-    &__list
-        display: block
+        &__list
+            display: block
 
-    &__item
-        justify-content: flex-end
+        &__item
+            justify-content: flex-end
 
-    &__item:not(:last-child)::after
-        display: none
+        &__item:not(:last-child)::after
+            display: none

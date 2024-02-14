@@ -5,7 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iPhone 13</title>
+
+    <link rel="icon" href="img/logo.svg" />
+
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+
+    <link rel="stylesheet" href="libs/choices/choices.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+
+    <script defer src="libs/jquery-3.6.0.min.js"></script>
+    <script defer src="libs/choices/choices.min.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
 
   <body>
@@ -44,7 +71,7 @@
 
             <p class="offer__price">от 79 000 руб.</p>
 
-            <button class="offer__btn btn">Оформить предзаказ</button>
+            <a href="#form-title" class="offer__btn btn">Оформить предзаказ</a>
           </div>
         </div>
       </section>
@@ -55,7 +82,20 @@
 
           <ul class="features__list">
             <li class="features__item card">
-              <img src="img/camera.jpg" alt="камера" class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/camera.avif 1x, img/camera-2x.avif 2x" />
+                <source
+                  type="image/webp"
+                  srcset="img/camera.webp 1x, img/camera-2x.webp 2x" />
+
+                <img
+                  src="img/camera.jpg"
+                  srcset="img/camera-2px.jpg 2x"
+                  alt="камера"
+                  class="card__picture" />
+              </picture>
 
               <h3 class="card__title">Камера</h3>
 
@@ -63,10 +103,21 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/compect.jpg"
-                alt="коробка с шнуром и телефоном"
-                class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/compect.avif 1x, img/compect-2x.avif 2x" />
+                <source
+                  type="image/webp"
+                  srcset="img/compect.webp 1x, img/compect-2x.webp 2x" />
+
+                <img
+                  src="img/compect.jpg"
+                  srcset="img/compect-2px.jpg 2x"
+                  alt="коробка с шнуром и телефоном"
+                  class="card__picture" />
+              </picture>
+
               <h3 class="card__title">Комплектация</h3>
               <p class="card__description">
                 Зарядное устройство. Беспроводные наушники.
@@ -74,10 +125,20 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/color.jpg"
-                alt="серый и синий телефоны"
-                class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/color.avif 1x, img/color-2x.avif 2x" />
+                <source
+                  type="image/webp"
+                  srcset="img/color.webp 1x, img/color-2x.webp 2x" />
+
+                <img
+                  src="img/color.jpg"
+                  srcset="img/color-2px.jpg 2x"
+                  alt="серый и синий телефоны"
+                  class="card__picture" />
+              </picture>
 
               <h3 class="card__title">Цвет</h3>
 
@@ -85,10 +146,20 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/frame.jpg"
-                alt="крепкий и надежный корпус iphone"
-                class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/frame.avif 1x, img/frame-2x.avif 2x" />
+                <source
+                  type="image/webp"
+                  srcset="img/frame.webp 1x, img/frame-2x.webp 2x" />
+
+                <img
+                  src="img/frame.jpg"
+                  srcset="img/frame-2px.jpg 2x"
+                  alt="крепкий и надежный корпус iphone"
+                  class="card__picture" />
+              </picture>
 
               <h3 class="card__title">Корпус</h3>
 
@@ -98,10 +169,20 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/line.jpg"
-                alt="4 модели нового iphone"
-                class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/line.avif 1x, img/line-2x.avif 2x" />
+                <source
+                  type="image/webp"
+                  srcset="img/line.webp 1x, img/line-2x.webp 2x" />
+
+                <img
+                  src="img/line.jpg"
+                  srcset="img/line-2px.jpg 2x"
+                  alt="4 модели нового iphone"
+                  class="card__picture" />
+              </picture>
 
               <h3 class="card__title">Линейка</h3>
 
@@ -111,10 +192,26 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/charger_magnetic.jpg"
-                alt="аккумулятор магнит и беспроводная зарядка"
-                class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="
+                    img/charger_magnetic.avif    1x,
+                    img/charger_magnetic-2x.avif 2x
+                  " />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/charger_magnetic.webp    1x,
+                    img/charger_magnetic-2x.webp 2x
+                  " />
+
+                <img
+                  src="img/charger_magnetic.jpg"
+                  srcset="img/charger_magnetic-2px.jpg 2x"
+                  alt="аккумулятор магнит и беспроводная зарядка"
+                  class="card__picture" />
+              </picture>
 
               <h3 class="card__title">Зарядка</h3>
 
@@ -126,47 +223,73 @@
 
       <section class="main__section order">
         <div class="container">
-          <h2 class="order__title">Оформить предзаказ</h2>
+          <h2 class="order__title" id="form-title">Оформить предзаказ</h2>
 
-          <form action="#" class="order__form form">
+          <form
+            action="#"
+            method="POST"
+            class="order__form form"
+            id="form-order">
             <fieldset class="form__box">
               <legend class="form__title-box">Персональные данные</legend>
 
-              <label for="fullName" class="form__label">ФИО</label>
+              <label for="fullName" class="form__label">ФИО<sup>*</sup></label>
               <input
                 type="text"
                 class="form__input"
                 id="fullName"
-                name="fullName" />
+                name="fullName"
+                required />
 
-              <label for="phone" class="form__label">Телефон</label>
-              <input type="text" class="form__input" id="phone" name="phone" />
+              <label for="phone" class="form__label">Телефон<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="phone"
+                name="phone"
+                required />
 
-              <label for="email" class="form__label">E-mail</label>
-              <input type="email" class="form__input" id="email" name="email" />
+              <label for="email" class="form__label">E-mail<sup>*</sup></label>
+              <input
+                type="email"
+                class="form__input"
+                id="email"
+                name="email"
+                required />
             </fieldset>
 
             <fieldset class="form__box">
               <legend class="form__title-box">Адрес доставки</legend>
 
-              <label for="city" class="form__label">Город</label>
-              <input type="text" class="form__input" id="city" name="city" />
+              <label for="city" class="form__label">Город<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="city"
+                name="city"
+                required />
 
-              <label for="index" class="form__label">Индекс</label>
-              <input type="text" class="form__input" id="index" name="index" />
+              <label for="index" class="form__label">Индекс<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="index"
+                name="index"
+                required />
 
-              <label for="address" class="form__label">Адрес</label>
+              <label for="address" class="form__label">Адрес<sup>*</sup></label>
               <input
                 type="text"
                 class="form__input"
                 id="address"
-                name="address" />
+                name="address"
+                required />
             </fieldset>
 
             <fieldset class="form__box">
               <legend class="form__title-box">Выбор модели</legend>
 
-              <label for="model" class="form__label"></label>
+              <label for="model" class="form__label">Модель</label>
               <select name="model" id="model" class="form__select">
                 <option value="iPhone13">iPhone 13</option>
                 <option value="iPhone13mini">iPhone 13 mini</option>
@@ -174,7 +297,7 @@
                 <option value="iPhone13ProMax">iPhone 13 Pro Max</option>
               </select>
 
-              <label for="color" class="form__label"></label>
+              <label for="color" class="form__label">Цвет</label>
               <select name="color" id="color" class="form__select">
                 <option value="Pearl">Pearl</option>
                 <option value="Graphite">Graphite</option>
@@ -194,31 +317,47 @@
               <legend class="form__title-box">Аксессуары</legend>
 
               <label class="form__label checkbox">
-                <input type="checkbox" name="accessories" id="case" />Чехол
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="accessories"
+                  value="case"
+                  id="case" />Чехол
               </label>
 
               <label class="form__label checkbox">
                 <input
+                  class="checkbox__input"
                   type="checkbox"
                   name="accessories"
-                  id="airpods" />Наушники AirPods 3
-              </label>
-
-              <label class="form__label checkbox">
-                <input type="checkbox" name="accessories" id="glass" />Защитное
-                стекло
+                  value="airpods"
+                  id="airpods"
+                  disabled />Наушники AirPods 3
               </label>
 
               <label class="form__label checkbox">
                 <input
+                  class="checkbox__input"
                   type="checkbox"
                   name="accessories"
+                  value="glass"
+                  id="glass"
+                  checked />Защитное стекло
+              </label>
+
+              <label class="form__label checkbox">
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="accessories"
+                  value="magsafe"
                   id="magsafe" />Зарядное устройство MagSafe
               </label>
             </fieldset>
-
-            <button type="submit" class="form__submit btn">Оформить</button>
           </form>
+          <button type="submit" class="form__submit btn" form="form-order">
+            Оформить
+          </button>
         </div>
       </section>
     </main>
@@ -230,7 +369,7 @@
         </p>
 
         <p class="footer__text-right">
-          Design by Anastasia Ilina
+          <span>Design by Anastasia Ilina</span>
           <a href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
         </p>
       </div>
